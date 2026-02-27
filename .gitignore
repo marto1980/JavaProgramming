@@ -1,4 +1,14 @@
-*.class
+# Eclipse / JDTLS metadata
+.settings/
+.classpath
+.project
+.factorypath
+
+# Build artifacts
 target/
-.cache/
+*.class
+
+# JDTLS log files
 jdtls.log
+.cache/
+
