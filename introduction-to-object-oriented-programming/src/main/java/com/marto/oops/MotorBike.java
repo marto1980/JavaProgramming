@@ -14,11 +14,11 @@ public class MotorBike {
   }
 
   public void increaseSpeed(int increment) {
-    this.speed += increment;
+    speed += increment;
   }
 
   public void decreaseSpeed(int decrement) {
-    this.speed -= decrement;
+    speed -= decrement;
   }
 
   void start() {
