@@ -11,14 +11,14 @@ public class Book {
   }
 
   public void setNoOfCopies(int noOfCopies) {
-    this.noOfCopies = noOfCopies;
+    if (noOfCopies > 0) this.noOfCopies = noOfCopies;
   }
 
   public void increaseNoOfCopies(int increment) {
-    noOfCopies += increment;
+    setNoOfCopies(noOfCopies + increment);
   }
 
   public void decreaseNoOfCopies(int decrement) {
-    noOfCopies -= decrement;
+    setNoOfCopies(noOfCopies - decrement);
   }
 }
