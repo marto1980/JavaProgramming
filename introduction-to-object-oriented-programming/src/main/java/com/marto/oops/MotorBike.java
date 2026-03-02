@@ -3,12 +3,12 @@ package com.marto.oops;
 public class MotorBike {
   private int speed;
 
-  void setSpeed(int speed) {
-    this.speed = speed;
+  public int getSpeed() {
+    return speed;
   }
 
-  int getSpeed() {
-    return this.speed;
+  public void setSpeed(int speed) {
+    this.speed = speed;
   }
 
   void start() {
