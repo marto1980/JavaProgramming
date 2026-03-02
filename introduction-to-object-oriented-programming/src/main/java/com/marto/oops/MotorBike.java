@@ -7,6 +7,10 @@ public class MotorBike {
     this.speed = speed;
   }
 
+  MotorBike() {
+    this(5);
+  }
+
   public int getSpeed() {
     return speed;
   }
