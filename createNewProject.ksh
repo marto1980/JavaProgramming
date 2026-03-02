@@ -12,9 +12,15 @@ GROUP_ID="com.marto"
 # 1. ARTIFACT_ID (The Folder Name) matches your input exactly (e.g. FirstJavaProject)
 ARTIFACT_ID="$PROJECT_NAME"
 
-# 2. PACKAGE_NAME (The Java Package) is forced to lowercase (e.g. com.marto.firstjavaproject)
-LOWER_PROJECT=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]')
-FULL_PACKAGE="$GROUP_ID.$LOWER_PROJECT"
+# 2. Determine the SUB_PACKAGE
+if [[ -n "$2" ]]; then
+  SUB_PACKAGE="$2"
+else
+  # Fallback: lowercase the project name
+  SUB_PACKAGE=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]')
+fi
+
+FULL_PACKAGE="$GROUP_ID.$SUB_PACKAGE"
 
 # 3. Calculate path for the success message
 PACKAGE_DIR=$(echo "$FULL_PACKAGE" | tr '.' '/')
@@ -32,6 +38,7 @@ mvn archetype:generate \
 
 if [[ $? -eq 0 ]]; then
   echo "\n--- Generation Complete ---"
+  echo "Next steps:"
   echo "1. cd $ARTIFACT_ID"
   echo "2. Edit pom.xml: Set <maven.compiler.source> and <target> to 25"
   echo "3. nvim src/main/java/$PACKAGE_DIR/App.java"
