@@ -18,7 +18,10 @@ public class MotorBike {
   }
 
   public void decreaseSpeed(int decrement) {
-    speed -= decrement;
+    int newSpeed = speed - decrement;
+    if (newSpeed > 0) {
+      speed = newSpeed;
+    }
   }
 
   void start() {
