@@ -14,7 +14,7 @@ public class MotorBike {
   }
 
   public void increaseSpeed(int increment) {
-    speed += increment;
+    setSpeed(speed + increment);
   }
 
   public void decreaseSpeed(int decrement) {
