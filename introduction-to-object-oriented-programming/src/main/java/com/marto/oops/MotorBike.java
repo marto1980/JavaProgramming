@@ -13,6 +13,14 @@ public class MotorBike {
     }
   }
 
+  public void increaseSpeed(int increment) {
+    this.speed += increment;
+  }
+
+  public void decreaseSpeed(int decrement) {
+    this.speed -= decrement;
+  }
+
   void start() {
     System.out.println("Bike Started");
   }
