@@ -12,6 +12,36 @@ public class MenuRunner {
     System.out.println("Enter Number1: ");
     int number1 = scanner.nextInt();
     System.out.println("The number you entered is - " + number1);
+
+    System.out.println("Enter number2: ");
+    int number2 = scanner.nextInt();
+    System.out.println("The number you entered is - " + number2);
+
+    System.out.println("\n");
+    System.out.println("1 - Add");
+    System.out.println("2 - Subtract");
+    System.out.println("3 - Divide");
+    System.out.println("4 - Multiply");
+
+    System.out.println("Choose Operation: ");
+    int operation = scanner.nextInt();
+
+    if (operation == 1) {
+      int result = number1 + number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 2) {
+      int result = number1 - number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 3) {
+      double result = (double) number1 / number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 4) {
+      int result = number1 * number2;
+      System.out.println("Result is - " + result);
+    } else {
+      System.out.println("Unsupported Operation!");
+    }
+
     scanner.close();
   }
 }
