@@ -4,7 +4,18 @@ public class IfStatementRunner {
   public static void main(String[] args) {
     // puzzle1();
     // puzzle2();
-    puzzle3();
+    // puzzle3();
+    puzzle5();
+  }
+
+  private static void puzzle5() {
+    int number = 5;
+    if (number < 0) {
+      number = number + 10;
+    }
+
+    number++;
+    System.out.println(number);
   }
 
   private static void puzzle3() {
