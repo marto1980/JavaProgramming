@@ -3,7 +3,20 @@ package com.marto.ifstatement.examples;
 public class IfStatementRunner {
   public static void main(String[] args) {
     // puzzle1();
-    puzzle2();
+    // puzzle2();
+    puzzle3();
+  }
+
+  private static void puzzle3() {
+    int m = 15;
+
+    if (m > 20) {
+      if (m < 20) {
+        System.out.println("m > 20");
+      } else {
+        System.out.println("Who am I?");
+      }
+    }
   }
 
   public static void puzzle1() {
