@@ -17,7 +17,7 @@ public class MenuRunner {
     int number2 = scanner.nextInt();
     System.out.println("The number you entered is - " + number2);
 
-    System.out.println("\n");
+    System.out.println("Choices are:");
     System.out.println("1 - Add");
     System.out.println("2 - Subtract");
     System.out.println("3 - Divide");
@@ -25,6 +25,11 @@ public class MenuRunner {
 
     System.out.println("Choose Operation: ");
     int operation = scanner.nextInt();
+
+    System.out.println("You selected:");
+    System.out.println("Number1: " + number1);
+    System.out.println("Number2: " + number2);
+    System.out.println("Operation number: " + operation);
 
     if (operation == 1) {
       int result = number1 + number2;
