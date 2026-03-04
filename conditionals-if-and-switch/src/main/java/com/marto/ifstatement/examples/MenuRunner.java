@@ -7,6 +7,58 @@ import java.util.Scanner;
  */
 public class MenuRunner {
 
+  public static void performOperationUsingNestedIfElse(int number1, int number2, int operation) {
+    if (operation == 1) {
+      int result = number1 + number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 2) {
+      int result = number1 - number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 3) {
+      double result = (double) number1 / number2;
+      System.out.println("Result is - " + result);
+    } else if (operation == 4) {
+      int result = number1 * number2;
+      System.out.println("Result is - " + result);
+    } else {
+      System.out.println("Unsupported Operation!");
+    }
+  }
+
+  public static void performOperationUsingSwitch(int number1, int number2, int operation) {
+    switch (operation) {
+      case 1:
+        {
+          int result = number1 + number2;
+          System.out.println("Result is - " + result);
+          break;
+        }
+      case 2:
+        {
+          int result = number1 - number2;
+          System.out.println("Result is - " + result);
+          break;
+        }
+      case 3:
+        {
+          double result = (double) number1 / number2;
+          System.out.println("Result is - " + result);
+          break;
+        }
+      case 4:
+        {
+          int result = number1 * number2;
+          System.out.println("Result is - " + result);
+          break;
+        }
+      default:
+        {
+          System.out.println("Unsupported Operation!");
+          break;
+        }
+    }
+  }
+
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter Number1: ");
@@ -31,21 +83,7 @@ public class MenuRunner {
     System.out.println("Number2: " + number2);
     System.out.println("Operation number: " + operation);
 
-    if (operation == 1) {
-      int result = number1 + number2;
-      System.out.println("Result is - " + result);
-    } else if (operation == 2) {
-      int result = number1 - number2;
-      System.out.println("Result is - " + result);
-    } else if (operation == 3) {
-      double result = (double) number1 / number2;
-      System.out.println("Result is - " + result);
-    } else if (operation == 4) {
-      int result = number1 * number2;
-      System.out.println("Result is - " + result);
-    } else {
-      System.out.println("Unsupported Operation!");
-    }
+    performOperationUsingSwitch(number1, number2, operation);
 
     scanner.close();
   }
