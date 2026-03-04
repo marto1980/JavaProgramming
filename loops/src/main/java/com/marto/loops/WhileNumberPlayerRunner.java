@@ -1,0 +1,15 @@
+package com.marto.loops;
+
+/**
+ * @author marto
+ */
+public class WhileNumberPlayerRunner {
+
+  public static void main(String[] args) {
+    WhileNumberPlayer player = new WhileNumberPlayer(30);
+
+    player.printSquaresUpToLimit();
+
+    player.printCubesUpToLimit();
+  }
+}
