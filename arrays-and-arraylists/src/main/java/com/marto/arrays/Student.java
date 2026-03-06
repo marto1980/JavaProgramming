@@ -51,9 +51,9 @@ public class Student {
 
   public BigDecimal getAverageMarks() {
     int sumOfMarks = getTotalSumOfMarks();
-    BigDecimal sum = new BigDecimal(Integer.valueOf(sumOfMarks).toString());
+    BigDecimal sum = new BigDecimal(sumOfMarks);
     int numberOfMarks = getNumberOfMarks();
-    BigDecimal number = new BigDecimal(Integer.valueOf(numberOfMarks).toString());
+    BigDecimal number = new BigDecimal(numberOfMarks);
 
     return sum.divide(number, 3, RoundingMode.HALF_UP);
   }
