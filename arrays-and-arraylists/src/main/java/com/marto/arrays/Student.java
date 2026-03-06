@@ -2,6 +2,8 @@ package com.marto.arrays;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author marto
@@ -9,15 +11,17 @@ import java.math.RoundingMode;
 public class Student {
 
   String name;
-  int[] marks;
+  ArrayList<Integer> marks = new ArrayList<Integer>();
 
   public Student(String name, int... marks) {
     this.name = name;
-    this.marks = marks;
+    for (int mark : marks) {
+      this.marks.add(mark);
+    }
   }
 
   public int getNumberOfMarks() {
-    return this.marks.length;
+    return this.marks.size();
   }
 
   public int getTotalSumOfMarks() {
@@ -30,23 +34,11 @@ public class Student {
   }
 
   public int getMaximumMark() {
-    int max = Integer.MIN_VALUE;
-    for (int mark : marks) {
-      if (mark > max) {
-        max = mark;
-      }
-    }
-    return max;
+    return Collections.max(marks);
   }
 
   public int getMinimumMark() {
-    int min = Integer.MAX_VALUE;
-    for (int mark : marks) {
-      if (mark < min) {
-        min = mark;
-      }
-    }
-    return min;
+    return Collections.min(marks);
   }
 
   public BigDecimal getAverageMarks() {
@@ -56,5 +48,9 @@ public class Student {
     BigDecimal number = new BigDecimal(numberOfMarks);
 
     return sum.divide(number, 3, RoundingMode.HALF_UP);
+  }
+
+  public String toString() {
+    return name + marks;
   }
 }

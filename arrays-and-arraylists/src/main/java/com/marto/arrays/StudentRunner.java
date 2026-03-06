@@ -17,5 +17,7 @@ public class StudentRunner {
 
     BigDecimal average = student.getAverageMarks();
     System.out.println("Average mark: " + average);
+
+    System.out.println(student);
   }
 }
