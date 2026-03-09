@@ -5,16 +5,16 @@ package com.marto.oops.level2.inheritance;
  */
 public class Person {
 
-  private String Name;
+  private String name;
   private String email;
   private String phoneNumber;
 
   public String getName() {
-    return Name;
+    return name;
   }
 
   public void setName(String name) {
-    Name = name;
+    this.name = name;
   }
 
   public String getEmail() {
@@ -31,5 +31,9 @@ public class Person {
 
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
+  }
+
+  public String toString() {
+    return String.format("Name: %s, Email: %s, Phone Number: %s", name, email, phoneNumber);
   }
 }
