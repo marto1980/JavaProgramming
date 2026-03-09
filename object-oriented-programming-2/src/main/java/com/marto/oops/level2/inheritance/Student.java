@@ -6,6 +6,11 @@ package com.marto.oops.level2.inheritance;
 public class Student extends Person {
   private String collegeName;
 
+  public Student(String name, String collegeName) {
+    super(name);
+    this.collegeName = collegeName;
+  }
+
   public String getCollegeName() {
     return collegeName;
   }
