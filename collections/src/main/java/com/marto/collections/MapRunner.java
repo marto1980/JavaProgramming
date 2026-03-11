@@ -1,52 +1,40 @@
 package com.marto.collections;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class MapRunner {
 
   public static void main(String[] args) {
     String str = "This is an awesome occasion. This has never happened before.";
 
-    Set<Character> charset = new HashSet<>();
-    for (Character character : str.toCharArray()) {
-      charset.add(character);
-    }
+    Map<Character, Integer> occurrences = new HashMap<>();
+    char[] characters = str.toCharArray();
 
-    Map<Character, Integer> charmap = new HashMap<>();
-    for (Character character : charset) {
-      int count = 0;
-      for (Character ch : str.toCharArray()) {
-        if (ch == character) {
-          count++;
-        }
+    for (Character ch : characters) {
+      Integer count = occurrences.get(ch);
+      if (count == null) {
+        occurrences.put(ch, 1);
+      } else {
+        occurrences.put(ch, count + 1);
       }
-      charmap.put(character, count);
     }
 
-    System.out.println("charset: " + charset);
-    System.out.println("charmap: " + charmap);
+    System.out.println("occurrences: " + occurrences);
 
-    Set<String> wordset = new HashSet<>();
-    String[] wordArray = str.split("[ .]");
-    for (String word : wordArray) {
-      wordset.add(word);
-    }
+    String[] words = str.split("[ .]");
 
     Map<String, Integer> wordmap = new HashMap<>();
 
-    for (String word : wordset) {
-      int count = 0;
-      for (String worda : wordArray) {
-        if (word.equals(worda)) {
-          count++;
-        }
+    for (String word : words) {
+      Integer count = wordmap.get(word);
+      if (count == null) {
+        wordmap.put(word, 1);
+      } else {
+        wordmap.put(word, count + 1);
       }
-      wordmap.put(word, count);
     }
-    System.out.println("wordset: " + wordset);
+
     System.out.println("wordmap: " + wordmap);
   }
 }
