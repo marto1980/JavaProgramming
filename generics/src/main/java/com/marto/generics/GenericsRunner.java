@@ -8,14 +8,14 @@ public class GenericsRunner {
     return value;
   }
 
-  static <X extends List> void duplicate(X list) {
+  static <X extends List<T>, T> void duplicate(X list) {
     list.addAll(list);
   }
 
   public static void main(String[] args) {
     String value1 = doubleValue(new String());
     Integer number1 = doubleValue(Integer.valueOf(5));
-    List list1 = doubleValue(new ArrayList<>());
+    List<Integer> list1 = doubleValue(new ArrayList<>());
 
     ArrayList<Integer> numbers = new ArrayList<>(List.of(1, 2, 3));
     duplicate(numbers);
