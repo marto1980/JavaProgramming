@@ -2,7 +2,7 @@ package com.marto.generics;
 
 import java.util.ArrayList;
 
-public class MyCustomList<T> {
+public class MyCustomList<T extends Number> {
   private ArrayList<T> list = new ArrayList<>();
 
   public void addElement(T element) {
