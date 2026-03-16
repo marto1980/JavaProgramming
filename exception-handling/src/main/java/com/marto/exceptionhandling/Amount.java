@@ -10,9 +10,9 @@ public class Amount {
     this.amount = amount;
   }
 
-  public void add(Amount that) {
+  public void add(Amount that) throws Exception {
     if (!this.currency.equals(that.currency)) {
-      throw new RuntimeException("Currencies Don't Match");
+      throw new Exception("Currencies Don't Match " + this.currency + " & " + that.currency);
     }
 
     this.amount = this.amount + that.amount;
