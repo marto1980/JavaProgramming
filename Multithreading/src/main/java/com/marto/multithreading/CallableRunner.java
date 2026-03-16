@@ -14,5 +14,6 @@ public class CallableRunner {
     String welcomeMessage = welcomeFuture.get();
     System.out.println(welcomeMessage);
     System.out.println("Main completed");
+    executorService.shutdown();
   }
 }
