@@ -8,7 +8,6 @@ public class FinallyRunner {
 
     Scanner scanner = null;
     try {
-
       scanner = new Scanner(System.in);
       int[] numbers = {12, 3, 4, 5};
       int number = numbers[5];
