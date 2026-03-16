@@ -7,13 +7,13 @@ public class ThreadBasicsRunner {
   public static void main(String[] args) throws InterruptedException {
     // Task 1
     System.out.println("Task 1 Kicked Off");
-    Task1 task1 = new Task1();
+    Task task1 = new Task(1);
     task1.setPriority(1);
     task1.start();
 
     // Task 2
     System.out.println("Task 2 Kicked Off");
-    Task2 task2 = new Task2();
+    Task task2 = new Task(2);
     Thread task2Thread = new Thread(task2);
     task2Thread.setPriority(10);
     task2Thread.start();
