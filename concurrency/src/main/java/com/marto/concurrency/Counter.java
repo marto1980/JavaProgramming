@@ -2,7 +2,7 @@ package com.marto.concurrency;
 
 public class Counter {
 
-  int i = 0;
+  private int i = 0;
 
   public int getI() {
     return i;
@@ -12,7 +12,7 @@ public class Counter {
     this.i = i;
   }
 
-  public void increment() {
+  public synchronized void increment() {
     i++;
   }
 }
