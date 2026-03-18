@@ -2,23 +2,6 @@ package com.marto.tips.enums;
 
 import java.util.Arrays;
 
-enum Season {
-  FALL(4),
-  WINTER(1),
-  SUMMER(3),
-  SPRING(2);
-
-  private int value;
-
-  private Season(int value) {
-    this.value = value;
-  }
-
-  public int getValue() {
-    return value;
-  }
-}
-
 public class EnumRunner {
 
   public static void main(String[] args) {
