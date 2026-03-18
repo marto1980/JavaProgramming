@@ -6,6 +6,10 @@ final class FinalClass {}
 
 class SomeClass {
   public final void doSomething() {}
+
+  public void doSomethingElse(final int arg) {
+    // arg = 6;
+  }
 }
 
 class ExtendingClass extends SomeClass {
