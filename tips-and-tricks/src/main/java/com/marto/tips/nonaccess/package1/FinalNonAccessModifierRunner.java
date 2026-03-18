@@ -1,4 +1,4 @@
-package com.marto.tips.access.package1;
+package com.marto.tips.nonaccess.package1;
 
 public class FinalNonAccessModifierRunner {
 
