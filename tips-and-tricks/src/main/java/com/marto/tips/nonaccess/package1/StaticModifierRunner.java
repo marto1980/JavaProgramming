@@ -10,6 +10,7 @@ class Player {
   }
 
   public String getName() {
+    System.out.println(count);
     return name;
   }
 
@@ -18,6 +19,8 @@ class Player {
   }
 
   public static int getCount() {
+    // System.out.println(name);
+    // System.out.println(getName());
     return count;
   }
 
