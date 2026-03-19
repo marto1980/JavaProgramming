@@ -8,6 +8,11 @@ public class RecordsRunner {
         throw new IllegalArgumentException("name is null");
       }
     }
+
+    public String name() {
+      System.out.println("Do something");
+      return name;
+    }
   }
 
   public static void main(String[] args) {
