@@ -3,13 +3,10 @@ package com.marto.api.h;
 public class RecordsRunner {
 
   record Person(String name, String email, String phoneNumber) {
-    Person(String name, String email, String phoneNumber) {
+    Person {
       if (name == null) {
         throw new IllegalArgumentException("name is null");
       }
-      this.name = name;
-      this.email = email;
-      this.phoneNumber = phoneNumber;
     }
   }
 
