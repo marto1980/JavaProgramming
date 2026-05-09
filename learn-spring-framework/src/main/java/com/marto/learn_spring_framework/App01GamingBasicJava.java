@@ -3,7 +3,7 @@ package com.marto.learn_spring_framework;
 import com.marto.learn_spring_framework.game.GameRunner;
 import com.marto.learn_spring_framework.game.PacManGame;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
   public static void main(String[] args) {
     // var game = new MarioGame();
