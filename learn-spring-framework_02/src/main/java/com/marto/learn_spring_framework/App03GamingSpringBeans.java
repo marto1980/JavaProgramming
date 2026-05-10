@@ -2,22 +2,18 @@ package com.marto.learn_spring_framework;
 
 import com.marto.learn_spring_framework.game.GameRunner;
 import com.marto.learn_spring_framework.game.GamingConsole;
-import com.marto.learn_spring_framework.game.PacManGame;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("com.marto.learn_spring_framework.game")
 public class App03GamingSpringBeans {
 
   @Bean
-  public GamingConsole game() {
-    var game = new PacManGame();
-    return game;
-  }
-
-  @Bean
   public GameRunner gameRunner(GamingConsole game) {
+    // System.out.println("Parameter: " + game);
     var gameRunner = new GameRunner(game);
     return gameRunner;
   }
