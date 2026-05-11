@@ -1,4 +1,4 @@
-package com.marto.learn_spring_framework.examples.a2.service;
+package com.marto.learn_spring_framework.examples.c1.service;
 
 import java.util.Arrays;
 import org.springframework.stereotype.Component;
