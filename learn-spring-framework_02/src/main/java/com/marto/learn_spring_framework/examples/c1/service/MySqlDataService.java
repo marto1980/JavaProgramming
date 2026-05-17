@@ -1,8 +1,9 @@
 package com.marto.learn_spring_framework.examples.c1.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+// @Component
+@Repository
 public class MySqlDataService implements DataService {
 
   @Override
