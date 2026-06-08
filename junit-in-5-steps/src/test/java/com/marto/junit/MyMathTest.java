@@ -7,15 +7,18 @@ import org.junit.jupiter.api.Test;
 /** Unit test for simple App. */
 public class MyMathTest {
 
+  private MyMath myMath = new MyMath();
+
+  @Test
+  public void calculateSum_emptyArray() {
+    int result = myMath.calculateSum(new int[] {});
+    assertEquals(0, result);
+  }
+
   /** Rigorous Test :-) */
   @Test
-  public void test() {
-    int[] numbers = {1, 2, 3};
-
-    MyMath myMath = new MyMath();
-    int result = myMath.calculateSum(numbers);
-
-    int expectedResult = 6;
-    assertEquals(expectedResult, result);
+  public void calculateSum_threeElements() {
+    int result = myMath.calculateSum(new int[] {1, 2, 3});
+    assertEquals(6, result);
   }
 }
