@@ -5,6 +5,7 @@ import com.marto.restapi.course.repository.CourseRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,5 +44,11 @@ public class CourseController {
   public void updateCourse(@PathVariable Long id, @RequestBody Course course) {
     course.setId(id);
     repository.save(course);
+  }
+
+  // DELETE - Delete a resource (/courses/1)
+  @DeleteMapping("/courses/{id}")
+  public void deleteCourse(@PathVariable Long id) {
+    repository.deleteById(id);
   }
 }
