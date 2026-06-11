@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Course {
-  @Id @GeneratedValue private long id;
+  @Id @GeneratedValue private Long id;
 
   private String name;
 
@@ -14,7 +14,7 @@ public class Course {
 
   public Course() {}
 
-  public Course(long id, String name, String author) {
+  public Course(Long id, String name, String author) {
     this.id = id;
     this.name = name;
     this.author = author;
@@ -37,7 +37,7 @@ public class Course {
     return "Course [id=" + id + ", name=" + name + ", author=" + author + "]";
   }
 
-  public void setId(long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
