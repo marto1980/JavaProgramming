@@ -3,8 +3,10 @@ package com.marto.restapi.controller;
 import com.marto.restapi.course.Course;
 import com.marto.restapi.course.repository.CourseRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -20,8 +22,13 @@ public class CourseController {
     // new Course(2, "Learn Full Stack with Angular and React", "in28minutes"));
   }
 
-  @GetMapping("/courses/1")
-  public Course getCourseDetails() {
-    return new Course(1, "Learn Microservices 1", "in28minutes");
+  // http://localhost:8080/courses/1
+  @GetMapping("/courses/{id}")
+  public Course getCourseDetails(@PathVariable long id) {
+    Optional<Course> course = repository.findById(id);
+    if (course.isEmpty()) {
+      throw new RuntimeException("Course not found with id " + id);
+    }
+    return course.get();
   }
 }
